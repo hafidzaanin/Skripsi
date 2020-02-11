@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PengajuanFragment">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:title="@string/pengajuan"
+        android:titleTextColor="@color/white">
+    </Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="380dp"
+        android:layout_height="20dp"
+        android:text="@string/lokasi"
+        android:layout_gravity="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+    </RelativeLayout>
+    <EditText
+        android:paddingLeft="10dp"
+        android:background="@drawable/form2"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp">
+    </RelativeLayout>
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_width="380dp"
+        android:layout_height="20dp"
+        android:text="@string/pilih_jalur"
+        android:layout_gravity="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+    </RelativeLayout>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="380dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp">
+    </RelativeLayout>
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_width="380dp"
+        android:layout_height="20dp"
+        android:text="@string/tanggal"
+        android:layout_gravity="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/Tanggal"
+        android:layout_width="380dp"
+        android:layout_height="20dp"
+        android:paddingLeft="10dp"
+        android:hint="@string/masukkan_tanggal"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp">
+    </RelativeLayout>
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_width="380dp"
+        android:layout_height="20dp"
+        android:text="@string/keterangan"
+        android:layout_gravity="center"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+    </RelativeLayout>
+    <EditText
+        android:paddingLeft="10dp"
+        android:background="@drawable/form2"
+        android:layout_width="380dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp">
+    </RelativeLayout>
+    <Button
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:text="@string/selesai"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_width="380dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

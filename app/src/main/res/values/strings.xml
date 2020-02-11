@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">TrashMe</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">LOGIN</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="pengguna">Pengguna</string>
+    <string name="petugas">Petugas</string>
+    <string name="ini_home">Ini HOME</string>
+    <string name="ini_bantuan">Ini Bantuan</string>
+    <string name="profil">Profil</string>
+    <string name="home">Home</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+    <string name="todo">TODO</string>
+    <string name="anda_ingin_masuk_sebagai">Anda ingin masuk sebagai:</string>
+    <string name="info_umum">Info Umum</string>
+    <string name="info_khusus">Info Khusus</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+    <string name="camera">Camera</string>
+    <string name="jadwal">Jadwal</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="bantuan">Bantuan</string>
+    <string name="title_activity_home2">Home2Activity</string>
+    <string name="minggu_1">Minggu 1</string>
+    <string name="minggu_2">Minggu 2</string>
+    <string name="minggu_3">Minggu 3</string>
+    <string name="senin">Senin</string>
+    <string name="jam_1">06.30 WIB</string>
+    <string name="jam_2">09.00 WIB</string>
+    <string name="bantuan_1">Petunjuk Penggunaan</string>
+    <string name="bantuan_2">FAQ</string>
+    <string name="bantuan_3">Tentang Aplikasi</string>
+    <string name="kreasi">Kreasi</string>
+    <string name="title_activity_pelanggaran">Pelanggaran</string>
+    <string name="large_text">
+        "TAHUKAH KAMU BAHWA TERDAPAT BEBERAPA PELANGGARAN TERKAIT SAMPAH?\n\n\n"
+        "Maka dari itu dibuatlah undang-undang yang mengatur tentang pengelolaan sampah, yaitu Undang-Undang Nomor 18 tahun 2008 tentang Pengelolaan Sampah\n\n"
+
+        "Undang-Undang Nomor 18 tahun 2008 tentang Pengelolaan Sampah disahkan pada tanggal 7 Mei 2008 di Jakarta oleh Presiden Doktor Haji Susilo Bambang Yudhoyono."
+        "Undang-Undang Nomor 18 tahun 2008 tentang Pengelolaan Sampah ditempatkan dalam Lembaran Negara Republik Indonesia Tahun 2008 Nomor 69 setelah diundangkan pada tanggal 7 Mei 2008 oleh Menkumham Andi Mattalatta di Jakarta, agar setiap orang mengetahuinya."
+        "Penjelasan Atas Undang-Undang Nomor 18 tahun 2008 tentang Pengelolaan Sampah ditempatkan pada Tambahan Lembaran Negara Republik Indonesia Nomor 4851.\n\n"
+
+        "Pokok kebijakan dalam Undang-Undang Nomor 18 tahun 2008 tentang Pengelolaan Sampah mengatur tentang penyelenggaraan pengelolaan sampah secara terpadu dan komprehensif, pemenuhan hak dan kewajiban masyarakat, serta tugas dan wewenang Pemerintah dan pemerintahan daerah untuk melaksanakan pelayanan publik."
+        "Pengaturan hukum pengelolaan sampah dalam Undang-Undang ini berdasarkan asas tanggung jawab, asas berkelanjutan, asas manfaat, asas keadilan, asas kesadaran, asas kebersamaan, asas keselamatan, asas keamanan, dan asas nilai ekonomi.\n\n"
+
+
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="testkata1">Ini Acrivity Tips dan Trik</string>
+    <string name="testkata2">Ini Activity Kreasi</string>
+    <string name="tipsntrik">TipsNTrik</string>
+    <string name="tagihan">Tagihan</string>
+    <string name="pengajuan">Form Pengajuan</string>
+    <string name="pengaduan">Pengaduan</string>
+    <string name="title_activity_jadwal">JadwalActivity</string>
+    <string name="testkata3">Ini Activity Tagihan</string>
+    <string name="bulan_1">Bulan Januari</string>
+    <string name="tagihan1">Rp100.000</string>
+    <string name="bulan_2">Bulan Februari</string>
+    <string name="bulan_3">Bulan Maret</string>
+    <string name="register">Register</string>
+    <string name="nik">Masukkan NIK</string>
+    <string name="password">Masukkan Password</string>
+    <string name="anda_belum_punya_akun">Anda belum punya akun?</string>
+    <string name="registrasi">Registrasi</string>
+    <string name="masukkan_lokasi">Masukkan Lokasi</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="selesai">Selesai</string>
+    <string name="pilih_jalur">Pilih Jalur</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="masukkan_tanggal">Masukkan Tanggal</string>
+
+</resources>
