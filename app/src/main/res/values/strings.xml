@@ -87,5 +87,8 @@
     <string name="pilih_jalur">Pilih Jalur</string>
     <string name="tanggal">Tanggal</string>
     <string name="masukkan_tanggal">Masukkan Tanggal</string>
+    <string name="kreasi_1">Kreasi 1</string>
+    <string name="judul_kreasi">Judul Kreasi</string>
+    <string name="judul_tips">Judul Tips</string>
 
 </resources>

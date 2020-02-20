@@ -34,6 +34,7 @@
             android:layout_height="25dp">
         </RelativeLayout>
         <EditText
+            android:id="@+id/nik"
             android:paddingLeft="10dp"
             android:drawableStart="@drawable/ic_action_profil"
             android:hint="@string/nik"
@@ -45,6 +46,7 @@
             android:layout_height="15dp">
         </RelativeLayout>
         <EditText
+            android:id="@+id/password"
             android:paddingLeft="10dp"
             android:drawableStart="@drawable/password"
             android:hint="@string/password"
@@ -57,11 +59,13 @@
             android:layout_height="15dp">
         </RelativeLayout>
         <Button
+            android:id="@+id/login"
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="@string/login"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
+            android:textSize="20sp"
             android:layout_width="140dp"
             android:background="@drawable/form"
             android:layout_height="wrap_content" />

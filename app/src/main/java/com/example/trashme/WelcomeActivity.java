@@ -3,7 +3,6 @@ package com.example.trashme;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
 public class WelcomeActivity extends Activity {
@@ -20,7 +19,7 @@ public class WelcomeActivity extends Activity {
     }
 
     public void petugas (View view) {
-        Intent intent = new Intent(WelcomeActivity.this, Home2Activity.class);
+        Intent intent = new Intent(WelcomeActivity.this, HomePetugasActivity.class);
         startActivity(intent);
     }
 }

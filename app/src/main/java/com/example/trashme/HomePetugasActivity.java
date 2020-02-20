@@ -4,11 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class Home2Activity extends Activity {
+public class HomePetugasActivity extends Activity {
 
     private TextView mTextMessage;
 
@@ -35,7 +35,7 @@ public class Home2Activity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home2);
+        setContentView(R.layout.activity_home_petugas);
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);

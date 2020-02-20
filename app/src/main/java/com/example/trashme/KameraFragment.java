@@ -10,6 +10,7 @@ public class KameraFragment extends Fragment {
 
     public KameraFragment() {
         // Required empty public constructor
+
     }
 
     @Override
