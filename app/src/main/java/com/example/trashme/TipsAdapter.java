@@ -47,17 +47,17 @@ public class TipsAdapter extends RecyclerView.Adapter<TipsAdapter.ViewHolder> {
         final String desc2 = data.get(i).getDesc();
         viewHolder.textDescription2.setText(desc2);
 
-       // viewHolder.listTips.setOnClickListener(new View.OnClickListener() {
-        //     @Override
-        // public void onClick(View v) {
+        viewHolder.listTips.setOnClickListener(new View.OnClickListener() {
+             @Override
+         public void onClick(View v) {
                 // start new intent
-        //      Intent i = new Intent(v.getContext(),DetailTipsActivity.class);
-        //      i.putExtra("imageTips", tipsItem.getImageTips());
-        //      i.putExtra("titleTips", title2);
-        //      i.putExtra("descTips", desc2);
-        //      v.getContext().startActivity(i);
-        //  }
-        //});
+              Intent i = new Intent(v.getContext(),DetailTipsActivity.class);
+              i.putExtra("imageTips", tipsItem.getImageTips());
+              i.putExtra("titleTips", title2);
+              i.putExtra("descTips", desc2);
+              v.getContext().startActivity(i);
+          }
+        });
 
     }
 

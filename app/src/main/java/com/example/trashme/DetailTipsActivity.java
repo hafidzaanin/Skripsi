@@ -17,8 +17,8 @@ public class DetailTipsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_tips);
 
-        imageTips = findViewById(R.id.imagekreasiDetail);
-        textTitle = findViewById(R.id.detailkreasiTitle);
+        imageTips = findViewById(R.id.imagetipsDetail);
+        textTitle = findViewById(R.id.detailtipsTitle);
 
         Intent i = getIntent();
 

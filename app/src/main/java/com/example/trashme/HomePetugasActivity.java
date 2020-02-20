@@ -1,16 +1,14 @@
 package com.example.trashme;
 
-import android.app.Activity;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import android.view.MenuItem;
-import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class HomePetugasActivity extends Activity {
+public class HomePetugasActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -19,13 +17,22 @@ public class HomePetugasActivity extends Activity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    Fragment fragment = new HomePetugasFragment();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.container_petugas_layout, fragment, fragment.getClass().getSimpleName())
+                            .commit();
                     return true;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                    fragment = new DashboardPetugasFragment();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.container_petugas_layout, fragment, fragment.getClass().getSimpleName())
+                            .commit();
                     return true;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                    fragment = new NotificationPetugasFragment();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.container_petugas_layout, fragment, fragment.getClass().getSimpleName())
+                            .commit();
                     return true;
             }
             return false;
@@ -37,9 +44,13 @@ public class HomePetugasActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_petugas);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        if (savedInstanceState == null){
+            navigation.setSelectedItemId(R.id.navigation_home);
+        }
     }
 
 }
