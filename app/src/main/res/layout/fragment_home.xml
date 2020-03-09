@@ -6,7 +6,7 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bghome"
-    tools:context=".HomeFragment">
+    tools:context=".fragments.HomeFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

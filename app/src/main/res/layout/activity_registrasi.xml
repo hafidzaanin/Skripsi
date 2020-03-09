@@ -1,9 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrasiActivity">
+    android:orientation="vertical"
+    tools:context=".activities.RegistrasiActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/daftar"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/nik"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/form2"
+            android:hint="@string/nik2"
+            android:paddingLeft="30dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp">
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/form2"
+            android:hint="@string/nama"
+            android:inputType="textPassword"
+            android:paddingLeft="30dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp">
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/form2"
+            android:hint="@string/no_telp"
+            android:inputType="textPassword"
+            android:paddingLeft="30dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp">
+        </RelativeLayout>
+        <Spinner
+            android:id="@+id/jenisPelanggan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/form2"
+            android:entries="@array/jenis_pelanggan"
+            android:paddingLeft="30dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp">
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/form2"
+            android:hint="@string/nama_jalan_rt_rw"
+            android:inputType="textPassword"
+            android:paddingLeft="30dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp">
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/form2"
+            android:hint="@string/password2"
+            android:inputType="textPassword"
+            android:paddingLeft="30dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp">
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/daftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:text="@string/daftar"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>

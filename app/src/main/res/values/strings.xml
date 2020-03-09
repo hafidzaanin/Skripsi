@@ -90,5 +90,28 @@
     <string name="kreasi_1">Kreasi 1</string>
     <string name="judul_kreasi">Judul Kreasi</string>
     <string name="judul_tips">Judul Tips</string>
+    <string name="open_camera">Buka Kamera</string>
+    <string name="password2">Password</string>
+    <string name="masukkan_username">Masukkan username</string>
+    <string name="silahkan_registrasi_terlebih_dahulu">Silahkan Registrasi terlebih dahulu</string>
+    <string name="daftar">Daftar</string>
+    <string name="nik2">NIK</string>
+    <string name="nama">Nama</string>
+    <string name="no_telp">No Telp</string>
+    <string name="nama_jalan_rt_rw">Nama Jalan/RT/RW</string>
+    <string-array name="jenis_pelanggan">
+        <item>Hotel</item>
+        <item>Ruko</item>
+        <item>Restoran</item>
+        <item>Pedagang(Pasar)</item>
+        <item>Fasilitas Umum</item>
+        <item>Pergudangan</item>
+        <item>Industri</item>
+        <item>Perkantoran</item>
+        <item>Bengkel</item>
+        <item>Gedung Pertemuan</item>
+        <item>Pusat Pembelanjaan</item>
+        <item>Sarana Olahraga dan Tempat Hiburan</item>
+    </string-array>
 
 </resources>
