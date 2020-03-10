@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/registrasi"
     tools:context=".activities.RegistrasiActivity">
 
 
@@ -64,12 +65,30 @@
             android:layout_height="15dp">
         </RelativeLayout>
         <Spinner
-            android:id="@+id/jenisPelanggan"
+            android:id="@+id/list_jenis_pelanggan"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="@drawable/form2"
-            android:entries="@array/jenis_pelanggan"
+            android:paddingLeft="30dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp">
+        </RelativeLayout>
+        <Spinner
+            android:id="@+id/list_kecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:paddingLeft="30dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp">
+        </RelativeLayout>
+        <Spinner
+            android:id="@+id/list_kelurahan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
             android:paddingLeft="30dp"/>
         <RelativeLayout
             android:layout_width="match_parent"

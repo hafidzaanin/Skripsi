@@ -1,12 +1,15 @@
 package com.hafidza.trashme.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.hafidza.trashme.R;
 
@@ -14,6 +17,7 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText nik, password;
     Button login;
+    TextView registrasi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,16 @@ public class LoginActivity extends AppCompatActivity {
         });
         cek_form(nik);
         cek_form(password);
+
+        registrasi=(TextView) findViewById(R.id.registrasi);
+
+        registrasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iRegister = new Intent(getApplicationContext(), RegistrasiActivity.class);
+                startActivity(iRegister);
+            }
+        });
     }
 
     void login()
@@ -50,10 +64,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    void kirim_data()
-    {
-
-    }
 
     void cek_form(EditText editText)
     {

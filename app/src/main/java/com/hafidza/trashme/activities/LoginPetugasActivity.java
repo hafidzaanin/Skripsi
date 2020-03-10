@@ -28,11 +28,12 @@ import java.util.Map;
 
 public class LoginPetugasActivity extends AppCompatActivity {
 
-    private static String URL_LOGIN = "";
     private EditText username, password;
     private Button btnlogin;
     private TextView link_regis;
     private ProgressBar loading;
+    private static String URL_LOGIN = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

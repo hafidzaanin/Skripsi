@@ -6,4 +6,27 @@
             <item>Rute 3</item>
             <item>Rute 4</item>
         </string-array>
+
+        <string-array name="jenis_pelanggan_array">
+            <item>Rute 1</item>
+            <item>Rute 2</item>
+            <item>Rute 3</item>
+            <item>Rute 4</item>
+        </string-array>
+
+        <string-array name="kecamatan_array">
+            <item>Metro Pusat</item>
+            <item>Metro Utara</item>
+            <item>Metro Barat</item>
+            <item>Metro Timur</item>
+            <item>Metro Selatan</item>
+        </string-array>
+
+        <string-array name="kelurahan_array">
+            <item>Hadimulyo Barat</item>
+            <item>Hadimulyo Timur</item>
+            <item>Imopuro</item>
+            <item>Yosomulyo</item>
+            <item>Metro</item>
+        </string-array>
 </resources>
