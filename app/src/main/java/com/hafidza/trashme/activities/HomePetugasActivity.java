@@ -4,10 +4,10 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.hafidza.trashme.fragments.ProfilPetugasFragment;
 import com.hafidza.trashme.fragments.HomePetugasFragment;
 import com.hafidza.trashme.fragments.BantuanPetugasFragment;
 import com.hafidza.trashme.R;
+import com.hafidza.trashme.fragments.ProfilPetugasFragment;
 
 import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
