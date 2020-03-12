@@ -14,14 +14,14 @@ import com.hafidza.trashme.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link NotificationPetugasFragment.OnFragmentInteractionListener} interface
+ * {@link BantuanPetugasFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link NotificationPetugasFragment#newInstance} factory method to
+ * Use the {@link BantuanPetugasFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class NotificationPetugasFragment extends Fragment {
+public class BantuanPetugasFragment extends Fragment {
 
-    public NotificationPetugasFragment() {
+    public BantuanPetugasFragment() {
         // Required empty public constructor
     }
 
@@ -30,7 +30,7 @@ public class NotificationPetugasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notification_petugas, container, false);
+        return inflater.inflate(R.layout.fragment_bantuan_petugas, container, false);
     }
 
 

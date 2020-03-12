@@ -99,19 +99,6 @@
     <string name="nama">Nama</string>
     <string name="no_telp">No Telp</string>
     <string name="nama_jalan_rt_rw">Nama Jalan/RT/RW</string>
-    <string-array name="jenis_pelanggan">
-        <item>Hotel</item>
-        <item>Ruko</item>
-        <item>Restoran</item>
-        <item>Pedagang(Pasar)</item>
-        <item>Fasilitas Umum</item>
-        <item>Pergudangan</item>
-        <item>Industri</item>
-        <item>Perkantoran</item>
-        <item>Bengkel</item>
-        <item>Gedung Pertemuan</item>
-        <item>Pusat Pembelanjaan</item>
-        <item>Sarana Olahraga dan Tempat Hiburan</item>
-    </string-array>
+
 
 </resources>

@@ -21,7 +21,7 @@ public class WelcomeActivity extends Activity {
     }
 
     public void petugas (View view) {
-        Intent intent = new Intent(WelcomeActivity.this, HomePetugasActivity.class);
+        Intent intent = new Intent(WelcomeActivity.this, LoginPetugasActivity.class);
         startActivity(intent);
     }
 }

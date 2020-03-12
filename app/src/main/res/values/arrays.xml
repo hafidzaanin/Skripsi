@@ -8,13 +8,23 @@
         </string-array>
 
         <string-array name="jenis_pelanggan_array">
-            <item>Rute 1</item>
-            <item>Rute 2</item>
-            <item>Rute 3</item>
-            <item>Rute 4</item>
+            <item>Jenis Pelanggan</item>
+            <item>Hotel</item>
+            <item>Ruko</item>
+            <item>Restoran</item>
+            <item>Pedagang(Pasar)</item>
+            <item>Fasilitas Umum</item>
+            <item>Pergudangan</item>
+            <item>Industri</item>
+            <item>Perkantoran</item>
+            <item>Bengkel</item>
+            <item>Gedung Pertemuan</item>
+            <item>Pusat Pembelanjaan</item>
+            <item>Sarana Olahraga dan Tempat Hiburan</item>
         </string-array>
 
         <string-array name="kecamatan_array">
+            <item>Kecamatan</item>
             <item>Metro Pusat</item>
             <item>Metro Utara</item>
             <item>Metro Barat</item>
@@ -23,6 +33,7 @@
         </string-array>
 
         <string-array name="kelurahan_array">
+            <item>Kelurahan</item>
             <item>Hadimulyo Barat</item>
             <item>Hadimulyo Timur</item>
             <item>Imopuro</item>

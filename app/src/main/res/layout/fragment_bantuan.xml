@@ -17,7 +17,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
@@ -33,7 +33,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
                 android:orientation="horizontal">
 
@@ -47,7 +46,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bantuan_1"
                         android:textColor="@color/black"
-                        android:textSize="20dp" />
+                        android:textSize="12dp" />
                 </LinearLayout>
 
                 <RelativeLayout
@@ -66,9 +65,9 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="20dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
         app:cardCornerRadius="8dp">
 
@@ -82,7 +81,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
                 android:orientation="horizontal">
 
@@ -96,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bantuan_2"
                         android:textColor="@color/black"
-                        android:textSize="20dp" />
+                        android:textSize="12dp" />
                 </LinearLayout>
 
                 <RelativeLayout
@@ -115,9 +113,9 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="20dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
         app:cardCornerRadius="8dp">
 
@@ -131,7 +129,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
                 android:orientation="horizontal">
 
@@ -145,7 +142,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bantuan_3"
                         android:textColor="@color/black"
-                        android:textSize="20dp" />
+                        android:textSize="12dp" />
                 </LinearLayout>
 
                 <RelativeLayout
