@@ -7,39 +7,49 @@
     android:background="@drawable/bghome"
     tools:context=".fragments.HomeFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginTop="250dp"
-        app:cardBackgroundColor="@color/grey">
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="6dp"
-                android:text="@string/info_umum"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.342"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/info_umum"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
     </androidx.cardview.widget.CardView>
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.458"
+        tools:layout_editor_absoluteX="0dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="27dp"
             android:layout_marginTop="20dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/grey">
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -58,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pelanggaran"
                     android:textAlignment="center"
-                    android:textSize="7pt"/>
+                    android:textSize="7pt" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -67,8 +77,8 @@
             android:layout_height="100dp"
             android:layout_marginStart="27dp"
             android:layout_marginTop="20dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/grey">
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/tipsntrik"
                     android:textAlignment="center"
-                    android:textSize="7pt"/>
+                    android:textSize="7pt" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -96,8 +106,8 @@
             android:layout_height="100dp"
             android:layout_marginStart="27dp"
             android:layout_marginTop="20dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/grey">
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -116,17 +126,24 @@
                     android:layout_height="wrap_content"
                     android:text="@string/kreasi"
                     android:textAlignment="center"
-                    android:textSize="7pt"/>
+                    android:textSize="7pt" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        app:cardBackgroundColor="@color/grey">
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.624"
+        tools:layout_editor_absoluteX="0dp">
+
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
@@ -138,17 +155,24 @@
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.789"
+        tools:layout_editor_absoluteX="0dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="27dp"
             android:layout_marginTop="20dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/grey">
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -167,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/tagihan"
                     android:textAlignment="center"
-                    android:textSize="7pt"/>
+                    android:textSize="7pt" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -176,8 +200,8 @@
             android:layout_height="100dp"
             android:layout_marginStart="27dp"
             android:layout_marginTop="20dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/grey">
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -195,8 +219,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/jadwal"
-                    android:textSize="7pt"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center"
+                    android:textSize="7pt" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -205,8 +229,8 @@
             android:layout_height="100dp"
             android:layout_marginStart="27dp"
             android:layout_marginTop="20dp"
-            app:cardCornerRadius="8dp"
-            app:cardBackgroundColor="@color/grey">
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -229,7 +253,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

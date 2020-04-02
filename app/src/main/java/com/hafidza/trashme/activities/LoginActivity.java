@@ -64,6 +64,11 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    void kirim_data()
+    {
+
+    }
+
 
     void cek_form(EditText editText)
     {

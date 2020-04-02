@@ -32,7 +32,7 @@ public class LoginPetugasActivity extends AppCompatActivity {
     private Button btnlogin;
     private TextView link_regis;
     private ProgressBar loading;
-    private static String URL_LOGIN = "http://192.168.43.239/API/login.php";
+    private static String URL_LOGIN = "";
 
 
     @Override
