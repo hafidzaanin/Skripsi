@@ -28,9 +28,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText nik, password;
-    Button login;
+    Button buttonLogin;
     TextView registrasi;
-    private Object buttonLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,16 +39,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         nik = (EditText) findViewById(R.id.nik);
         password = (EditText) findViewById(R.id.password);
 
-        login = (Button) findViewById(R.id.login);
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                login();
-            }
-        });
-        cek_form(nik);
-        cek_form(password);
+        buttonLogin = (Button) findViewById(R.id.login);
 
         registrasi = (TextView) findViewById(R.id.registrasi);
 
@@ -58,40 +48,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onClick(View v) {
                 Intent iRegister = new Intent(getApplicationContext(), RegistrasiActivity.class);
                 startActivity(iRegister);
-            }
-        });
-    }
-
-    void login() {
-        if (nik.getText().length() < 1) {
-            nik.setBackgroundResource(R.drawable.form_error);
-        }
-        if (password.getText().length() < 1) {
-            password.setBackgroundResource(R.drawable.form_error);
-        } else {
-
-        }
-    }
-
-    void cek_form(EditText editText) {
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (count < 1) {
-                    nik.setBackgroundResource(R.drawable.form_error);
-                } else {
-                    nik.setBackgroundResource(R.drawable.form);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
             }
         });
     }
