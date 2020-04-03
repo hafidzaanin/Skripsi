@@ -59,7 +59,7 @@
             android:layout_height="15dp">
         </RelativeLayout>
         <Button
-            android:id="@+id/login"
+            android:id="@+id/buttonLogin"
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:text="@string/login"

@@ -43,7 +43,7 @@
             android:layout_height="15dp">
         </RelativeLayout>
         <EditText
-            android:id="@+id/nama"
+            android:id="@+id/nama_pelanggan"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/form2"
@@ -122,7 +122,7 @@
         </RelativeLayout>
 
         <Button
-            android:id="@+id/daftar"
+            android:id="@+id/buttonDaftar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
