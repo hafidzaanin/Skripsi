@@ -102,10 +102,10 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
                 user.getNik(),
                 user.getNama_pelanggan(),
                 user.getNo_telp(),
-                user.getJenis_pelanggan(),
+                user.getId_jenisPelanggan(),
+                user.getId_jalur(),
                 user.getKelurahan(),
                 user.getKecamatan(),
-                user.getNama_jalan_rt_rw(),
                 user.getPassword()
         );
 

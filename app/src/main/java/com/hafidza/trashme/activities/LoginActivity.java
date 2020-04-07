@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             String password_text = password.getText().toString().trim();
 
             if (TextUtils.isEmpty(nik_text)){
-                nik.setError("NPM harus diisi");
+                nik.setError("NIK harus diisi");
             }else if (TextUtils.isEmpty(password_text)){
                 password.setError("Password harus diisi");
             }else {
@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 progressDialog.dismiss();
                 if (!response.body().getError()) {
                     finish();
-                    SharedPrefManager.getInstance(getApplicationContext()).userLogin(response.body().getUser());
+//                    SharedPrefManager.getInstance(getApplicationContext()).userLogin(response.body().getUser());
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                 } else {
                     Toast.makeText(getApplicationContext(), "NIK atau Password anda salah", Toast.LENGTH_LONG).show();
