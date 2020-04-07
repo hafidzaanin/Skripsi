@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.text.TextUtils;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,12 +36,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        if (SharedPrefManager.getInstance(this).isLoggedIn()){
+            finish();
+            startActivity(new Intent(this, HomeActivity.class));
+        }
+
         nik = (EditText) findViewById(R.id.nik);
         password = (EditText) findViewById(R.id.password);
+        buttonLogin = (Button) findViewById(R.id.buttonLogin);
 
-        buttonLogin = (Button) findViewById(R.id.login);
-
+        buttonLogin.setOnClickListener(this);
         registrasi = (TextView) findViewById(R.id.registrasi);
+
 
         registrasi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,13 +58,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         });
     }
 
-    private void userSignIn() {
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Signing Up...");
-        progressDialog.show();
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.buttonLogin){
+            String nik_text = nik.getText().toString().trim();
+            String password_text = password.getText().toString().trim();
 
-        String nik_text = nik.getText().toString().trim();
-        String password_text = password.getText().toString().trim();
+            if (TextUtils.isEmpty(nik_text)){
+                nik.setError("NPM harus diisi");
+            }else if (TextUtils.isEmpty(password_text)){
+                password.setError("Password harus diisi");
+            }else {
+                userLogin(nik_text, password_text);
+            }
+        }
+    }
+
+
+    private void userLogin(String nik, String password) {
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(APIUrl.BASE_URL)
@@ -66,7 +86,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 .build();
 
         APIService service = retrofit.create(APIService.class);
-
 
         Call<Result> call = service.userLogin(nik, password);
 
@@ -79,7 +98,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     SharedPrefManager.getInstance(getApplicationContext()).userLogin(response.body().getUser());
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                 } else {
-                    Toast.makeText(getApplicationContext(), "Invalid email or password", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "NIK atau Password anda salah", Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -93,10 +112,4 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
-    @Override
-    public void onClick(View v) {
-        if (v == buttonLogin) {
-            userSignIn();
-        }
-    }
 }

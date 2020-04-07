@@ -9,7 +9,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Message;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -59,13 +62,19 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
                 android.R.layout.simple_spinner_item, getResources().getStringArray(R.array.kelurahan_array));
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         kelspinner.setAdapter(adapter3);
+
+
     }
 
     private void userSignUp() {
         //defining a progress dialog to show while signing up
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Signing Up...");
+        progressDialog.setMessage("Loading...");
         progressDialog.show();
+
+        final Spinner jpspinner = (Spinner) findViewById(R.id.list_jenis_pelanggan);
+        final Spinner kecspinner = (Spinner) findViewById(R.id.list_kecamatan);
+        final Spinner kelspinner = (Spinner) findViewById(R.id.list_kelurahan);
 
         //getting the user values
         String nik_text = nik.getText().toString().trim();
@@ -73,6 +82,10 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
         String no_telp_text = no_telp.getText().toString().trim();
         String jalan_text = jalan.getText().toString().trim();
         String password_text = password.getText().toString().trim();
+        String jpspinner_data = jpspinner.getSelectedItem().toString();
+        String kecpspinner_data = kecspinner.getSelectedItem().toString();
+        String kelspinner_data = kelspinner.getSelectedItem().toString();
+
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(APIUrl.BASE_URL)
