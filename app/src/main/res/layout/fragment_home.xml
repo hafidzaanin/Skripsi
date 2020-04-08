@@ -58,7 +58,7 @@
 
                 <ImageButton
                     android:id="@+id/button_Pelanggaran"
-                    android:layout_width="80dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:layout_gravity="center"
                     android:src="@mipmap/button_law" />

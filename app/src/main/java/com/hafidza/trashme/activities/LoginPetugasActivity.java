@@ -2,127 +2,103 @@ package com.hafidza.trashme.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.hafidza.trashme.R;
+import com.hafidza.trashme.api.APIService;
+import com.hafidza.trashme.api.APIUrl;
+import com.hafidza.trashme.helper.SharedPrefManager;
+import com.hafidza.trashme.models.Result;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
-import java.util.HashMap;
-import java.util.Map;
+public class LoginPetugasActivity extends AppCompatActivity implements View.OnClickListener{
 
-public class LoginPetugasActivity extends AppCompatActivity {
-
-    private EditText username, password;
-    private Button btnlogin;
-    private TextView link_regis;
-    private ProgressBar loading;
-    private static String URL_LOGIN = "";
-
+    Button btnLoginPetugas;
+    private EditText editTextUsername, editTextPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_petugas);
 
-        username = findViewById(R.id.username);
-        password = findViewById(R.id.password);
-        btnlogin = findViewById(R.id.login);
-        loading = findViewById(R.id.loading);
+        if (SharedPrefManager.getInstance(this).isLoggedIn()){
+            finish();
+            startActivity(new Intent(this, HomePetugasActivity.class));
+        }
 
-        btnlogin.setOnClickListener(new View.OnClickListener() {
+        editTextUsername = findViewById(R.id.username);
+        editTextPassword = findViewById(R.id.password2);
+        btnLoginPetugas = findViewById(R.id.btnLoginPetugas);
+
+        btnLoginPetugas.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.btnLoginPetugas){
+            String username = editTextUsername.getText().toString().trim();
+            String password = editTextPassword.getText().toString().trim();
+
+            if (TextUtils.isEmpty(username)){
+                editTextUsername.setError("Username harus diisi");
+            }else if (TextUtils.isEmpty(password)){
+                editTextPassword.setError("Password harus diisi");
+            }else {
+                petugasLogin(username, password);
+            }
+        }
+    }
+
+
+    private void petugasLogin (String username, String password) {
+        final ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
+
+       username = editTextUsername.getText().toString().trim();
+       password = editTextPassword.getText().toString().trim();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(APIUrl.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        APIService service = retrofit.create(APIService.class);
+
+
+        Call<Result> call = service.userLogin(username, password);
+
+        call.enqueue(new Callback<Result>() {
             @Override
-            public void onClick(View v) {
-                String mUsername = username.getText().toString().trim();
-                String mPass = password.getText().toString().trim();
-
-                if (!mUsername.isEmpty() || !mPass.isEmpty()){
-                    login(mUsername, mPass);
+            public void onResponse(Call<Result> call, Response<Result> response) {
+                progressDialog.dismiss();
+                if (!response.body().getError()) {
+                    finish();
+                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                 } else {
-                    username.setError("Tolong masukkan username/email");
-                    password.setError("Tolong masukkan password");
+                    Toast.makeText(getApplicationContext(), "Username atau Password anda salah", Toast.LENGTH_LONG).show();
                 }
             }
-        });
 
-    }
-
-    private void login(final String username, final String password)
-    {
-        loading.setVisibility(View.VISIBLE);
-        btnlogin.setVisibility(View.GONE);
-
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_LOGIN,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            String success = jsonObject.getString("success");
-                            JSONArray jsonArray = jsonObject.getJSONArray("login");
-
-                            if (success.equals("1")){
-
-                                for (int i = 0; i < jsonArray.length(); i++){
-                                    
-                                    JSONObject object = jsonArray.getJSONObject(i);
-                                    
-                                    String name = object.getString("name").trim();
-                                    String email = object.getString("email").trim();
-
-                                    Toast.makeText(LoginPetugasActivity.this,
-                                            "Succes Login \nYour Name: "
-                                                    +name+"\nYour email: "
-                                                    +email, Toast.LENGTH_SHORT)
-                                            .show();
-                                    loading.setVisibility(View.GONE);
-                                }
-                            }
-
-                        } catch (JSONException e){
-                            e.printStackTrace();
-                            loading.setVisibility(View.GONE);
-                            btnlogin.setVisibility(View.VISIBLE);
-                            Toast.makeText(LoginPetugasActivity.this, "Error" +e.toString(), Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        loading.setVisibility(View.GONE);
-                        btnlogin.setVisibility(View.VISIBLE);
-                        Toast.makeText(LoginPetugasActivity.this, "Error" + toString(), Toast.LENGTH_SHORT).show();
-                    }
-                })
-        {
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put("username", username);
-                params.put("password", password);
-                return params;
+            public void onFailure(Call<Result> call, Throwable t) {
+                progressDialog.dismiss();
+                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
             }
-
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
-
+        });
     }
+
 }
