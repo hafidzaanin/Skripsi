@@ -57,19 +57,19 @@ public class LoginPetugasActivity extends AppCompatActivity implements View.OnCl
             }else if (TextUtils.isEmpty(password)){
                 editTextPassword.setError("Password harus diisi");
             }else {
-                petugasLogin(username, password);
+                petugasLogin();
             }
         }
     }
 
 
-    private void petugasLogin (String username, String password) {
+    private void petugasLogin() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
         progressDialog.show();
 
-       username = editTextUsername.getText().toString().trim();
-       password = editTextPassword.getText().toString().trim();
+        String username = editTextUsername.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(APIUrl.BASE_URL)
@@ -78,8 +78,7 @@ public class LoginPetugasActivity extends AppCompatActivity implements View.OnCl
 
         APIService service = retrofit.create(APIService.class);
 
-
-        Call<Result> call = service.userLogin(username, password);
+        Call<Result> call = service.petugasLogin(username, password);
 
         call.enqueue(new Callback<Result>() {
             @Override
@@ -87,7 +86,7 @@ public class LoginPetugasActivity extends AppCompatActivity implements View.OnCl
                 progressDialog.dismiss();
                 if (!response.body().getError()) {
                     finish();
-                    startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                    startActivity(new Intent(getApplicationContext(), HomePetugasActivity.class));
                 } else {
                     Toast.makeText(getApplicationContext(), "Username atau Password anda salah", Toast.LENGTH_LONG).show();
                 }
