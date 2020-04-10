@@ -26,9 +26,9 @@ import java.util.Locale;
 public class PengajuanFragment extends Fragment {
 
     Spinner spinner;
-    DatePickerDialog.OnDateSetListener datePickerDialog;
-    Calendar calendar;
-    TextView tvDate;
+    private DatePickerDialog.OnDateSetListener datePickerDialog;
+    private Calendar calendar;
+    private TextView tvDate;
     private EditText date;
     private SimpleDateFormat dateFormat;
 
