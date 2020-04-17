@@ -99,6 +99,7 @@
     <string name="nama">Nama</string>
     <string name="no_telp">No Telp</string>
     <string name="nama_jalan_rt_rw">Nama Jalan/RT/RW</string>
+    <string name="kirim_aduan">Kirim Aduan</string>
 
 
 </resources>
