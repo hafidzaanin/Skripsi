@@ -8,6 +8,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.util.Log;
@@ -38,6 +39,7 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_registrasi);
 
         buttonDaftar = (Button) findViewById(R.id.buttonDaftar);
+        buttonDaftar.setOnClickListener(this);
 
         nik = (EditText) findViewById(R.id.nik);
         nama_pelanggan = (EditText) findViewById(R.id.nama_pelanggan);
@@ -64,6 +66,7 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
         kelspinner.setAdapter(adapter3);
 
 
+
     }
 
     private void userSignUp() {
@@ -82,9 +85,22 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
         String no_telp_text = no_telp.getText().toString().trim();
         String jalan_text = jalan.getText().toString().trim();
         String password_text = password.getText().toString().trim();
-        String jpspinner_data = jpspinner.getSelectedItem().toString();
+        //String jpspinner_data = jpspinner.getSelectedItem().toString();
         String kecpspinner_data = kecspinner.getSelectedItem().toString();
         String kelspinner_data = kelspinner.getSelectedItem().toString();
+
+        String id_jenisPelanggan = "0";
+        switch (jpspinner.getSelectedItem().toString()){
+            case "Rumah Tangga":
+                id_jenisPelanggan = "1";
+                break;
+            case "Ruko":
+                id_jenisPelanggan = "2";
+                break;
+            default:
+                //id_jenisPelanggann = "000";
+                break;
+        }
 
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -95,18 +111,21 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
         APIService service = retrofit.create(APIService.class);
 
         //Defining the user object as we need to pass it with the call
-        User user = new User(nik, nama_pelanggan, no_telp,  jalan, password);
+        User user = new User(nik_text, nama_pelanggan_text, no_telp_text, id_jenisPelanggan,
+                kecpspinner_data, kelspinner_data, jalan_text, password_text);
+
+        //Toast.makeText(RegistrasiActivity.this, nik_text + nama_pelanggan_text + no_telp_text + id_jenisPelanggan + kecpspinner_data + kelspinner_data + jalan_text, Toast.LENGTH_SHORT).show();
 
         //defining the call
         Call<Result> call = service.createUser(
-                user.getNik(),
-                user.getNama_pelanggan(),
-                user.getNo_telp(),
-                user.getId_jenisPelanggan(),
-                user.getId_jalur(),
-                user.getKelurahan(),
-                user.getKecamatan(),
-                user.getPassword()
+                nik_text,
+                nama_pelanggan_text,
+                no_telp_text,
+                id_jenisPelanggan,
+                kecpspinner_data,
+                kelspinner_data,
+                jalan_text,
+                password_text
         );
 
         //calling the api
@@ -118,6 +137,7 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
 
                 //displaying the message from the response as toast
                 Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_LONG).show();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
             }
 
             @Override
@@ -131,7 +151,7 @@ public class RegistrasiActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        if (v == buttonDaftar) {
+        if (v.getId() == R.id.buttonDaftar) {
             userSignUp();
         }
     }

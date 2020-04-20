@@ -9,8 +9,9 @@
 
         <string-array name="jenis_pelanggan_array">
             <item>Jenis Pelanggan</item>
-            <item>Hotel</item>
+            <item>Rumah Tangga</item>
             <item>Ruko</item>
+            <item>Hotel</item>
             <item>Restoran</item>
             <item>Pedagang(Pasar)</item>
             <item>Fasilitas Umum</item>
