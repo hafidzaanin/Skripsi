@@ -46,7 +46,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bantuan_1"
                         android:textColor="@color/black"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <RelativeLayout
@@ -57,6 +57,7 @@
                         android:layout_width="70dp"
                         android:layout_height="50dp"
                         android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
                         android:src="@drawable/ic_action_bantuan" />
                 </RelativeLayout>
             </LinearLayout>
@@ -94,7 +95,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bantuan_2"
                         android:textColor="@color/black"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <RelativeLayout
@@ -105,6 +106,7 @@
                         android:layout_width="70dp"
                         android:layout_height="50dp"
                         android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
                         android:src="@drawable/ic_action_bantuan" />
                 </RelativeLayout>
             </LinearLayout>
@@ -142,7 +144,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bantuan_3"
                         android:textColor="@color/black"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <RelativeLayout
@@ -153,6 +155,7 @@
                         android:layout_width="70dp"
                         android:layout_height="50dp"
                         android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
                         android:src="@drawable/ic_action_bantuan" />
                 </RelativeLayout>
             </LinearLayout>

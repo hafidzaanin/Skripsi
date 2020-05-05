@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".fragments.PengaduanFragment">
+
 
     <Button
         android:id="@+id/kirim_aduan"
@@ -27,15 +29,15 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="366dp" />
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/form2"
         android:paddingStart="10dp"
         android:paddingLeft="10dp"
-        tools:layout_editor_absoluteX="-18dp"
-        tools:layout_editor_absoluteY="296dp" />
+        android:text="@string/keterangan"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="346dp" />
 
     <ImageView
         android:id="@+id/imageCamera"
@@ -46,23 +48,38 @@
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="-16dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/lokasi"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="276dp" />
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/rlAlamat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingStart="10dp"
-        android:paddingLeft="10dp"
-        android:text="@string/keterangan"
+        android:background="@color/blue_50"
+        android:padding="10dp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="346dp" />
+        tools:layout_editor_absoluteY="267dp">
+
+        <ImageView
+            android:id="@+id/imgPlace"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:tint="@color/blue_700"
+            card_view:srcCompat="@drawable/ic_place_black_24dp" />
+
+        <TextView
+            android:id="@+id/tvAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/imgPlace"
+            android:text="@string/pilih_alamat_pengaduan"
+            android:textColor="@color/grey_800"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

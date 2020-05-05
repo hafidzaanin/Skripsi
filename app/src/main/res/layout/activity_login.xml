@@ -38,6 +38,7 @@
             android:paddingLeft="10dp"
             android:drawableStart="@drawable/ic_action_profil"
             android:hint="@string/nik"
+            android:inputType="number"
             android:background="@drawable/form"
             android:layout_width="match_parent"
             android:layout_height="50dp" />

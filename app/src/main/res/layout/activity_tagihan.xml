@@ -47,13 +47,13 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bulan_1"
                         android:textColor="@color/black"
-                        android:textSize="20dp" />
+                        android:textSize="20sp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/tagihan1"
                         android:textColor="@color/black"
-                        android:textSize="18dp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -105,13 +105,13 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bulan_2"
                         android:textColor="@color/black"
-                        android:textSize="20dp" />
+                        android:textSize="20sp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/tagihan1"
                         android:textColor="@color/black"
-                        android:textSize="18dp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -163,13 +163,13 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bulan_3"
                         android:textColor="@color/black"
-                        android:textSize="20dp" />
+                        android:textSize="20sp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/tagihan1"
                         android:textColor="@color/black"
-                        android:textSize="18dp" />
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 

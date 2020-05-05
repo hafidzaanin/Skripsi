@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <string-array name="rute_array">
-            <item>Rute 1</item>
-            <item>Rute 2</item>
-            <item>Rute 3</item>
-            <item>Rute 4</item>
+        <string-array name="jalur_array">
+            <item>Jalur 1</item>
+            <item>Jalur 2</item>
+            <item>Jalur 3</item>
+            <item>Jalur 4</item>
         </string-array>
 
         <string-array name="jenis_pelanggan_array">
@@ -40,5 +40,22 @@
             <item>Imopuro</item>
             <item>Yosomulyo</item>
             <item>Metro</item>
+            <item>Banjar Sari</item>
+            <item>Purwo Asri</item>
+            <item>Purwo Sari</item>
+            <item>Karang Rejo</item>
+            <item>Ganjar Agung</item>
+            <item>Ganjar Asri</item>
+            <item>Mulyojati</item>
+            <item>Mulyosari</item>
+            <item>Yosodadi</item>
+            <item>Iringmulyo</item>
+            <item>Tejo Agung</item>
+            <item>Yosorejo</item>
+            <item>Tejo Sari</item>
+            <item>Magodadi</item>
+            <item>Margo Rejo</item>
+            <item>Sumbersari</item>
+            <item>Rejomulyo</item>
         </string-array>
 </resources>

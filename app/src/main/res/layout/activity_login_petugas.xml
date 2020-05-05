@@ -40,6 +40,7 @@
             android:background="@drawable/form"
             android:drawableStart="@drawable/ic_action_profil"
             android:hint="@string/masukkan_username"
+            android:inputType="text"
             android:paddingLeft="10dp" />
         <RelativeLayout
             android:layout_width="match_parent"

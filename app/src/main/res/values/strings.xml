@@ -100,6 +100,9 @@
     <string name="no_telp">No Telp</string>
     <string name="nama_jalan_rt_rw">Nama Jalan/RT/RW</string>
     <string name="kirim_aduan">Kirim Aduan</string>
+    <string name="upload_ktp">Upload KTP</string>
+    <string name="pilih_alamat_pengajuan">Pilih alamat pengajuan</string>
+    <string name="pilih_alamat_pengaduan">Pilih alamat pengaduan</string>
 
 
 </resources>
